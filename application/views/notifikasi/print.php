@@ -3,6 +3,10 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<!-- Favicons -->
+<title>invoice #<?= $s['id_sewa'] ?> - DVM Group - <?= $title ?></title>
+<link href="<?= base_url('assets/') ?>bootslander2/assets/img/dvm.png" rel="icon">
+<link href="<?= base_url('assets/') ?>bootslander2/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 <?php
 $count = 1;
@@ -34,15 +38,15 @@ foreach ($sewa as $s) { ?>
                                     <p class="mb-1"><?= $s['alamat'] ?></p>
                                     <p class="mb-1"><?= $s['no_hp'] ?></p>
                                     <p class="font-weight-bold mb-2 mt-3">Detail Mobil</p>
-                                    <p class="mb-1">Mobil : <?= $s['merk'] ?>, <?= $s['warna'] ?>, <?= $s['jml_kursi'] ?> Kursi, <?= $s['transmisi'] ?></p>
-                                    <p class="mb-1">Nomor TNKB : <?= $s['tnkb'] ?></p>
+                                    <p class="mb-1">Data Mobil : <?= $s['merk'] ?>, <?= $s['warna'] ?>, <?= $s['jml_kursi'] ?> Kapasitas Orang, <?= $s['transmisi'] ?></p>
+                                    <p class="mb-1">Jenis Ganjil / Genap TNKB : <?= $s['tnkb'] ?></p>
                                 </div>
 
                                 <div class="col-md-6 text-right">
                                     <p class="font-weight-bold mb-2">Rincian Tanggal</p>
-                                    <p class="mb-1"><span class="text-muted">Tanggal Sewa: <?= date('d F Y', $s['updated_at']) ?>
-                                            <p class="mb-1"><span class="text-muted">Selama <?= $s['hari'] ?> hari
-                                                    <p class="mb-1"><span class="text-muted">Sampai: <?= date('d F Y', strtotime("+" . $s['hari'] . "days", $s['updated_at'])) ?>
+                                    <p class="mb-1"><span class="text-muted">Tanggal Sewa Mobil : <?= date('d F Y', $s['updated_at']) ?>
+                                            <p class="mb-1"><span class="text-muted">Lama Sewa Mobil - <?= $s['hari'] ?> hari
+                                                    <p class="mb-1"><span class="text-muted">Selesai Sewa Mobil : <?= date('d F Y', strtotime("+" . $s['hari'] . "days", $s['updated_at'])) ?>
                                 </div>
                             </div>
 
@@ -53,12 +57,12 @@ foreach ($sewa as $s) { ?>
                                 </div>
 
                                 <div class="py-3 px-5 text-right">
-                                    <div class="mb-2">Hari</div>
-                                    <div class="h2 font-weight-light"><?= $s['hari'] ?></div>
+                                    <div class="mb-2">Lama Sewa Mobil</div>
+                                    <div class="h2 font-weight-light"><?= $s['hari'] ?> Hari</div>
                                 </div>
 
                                 <div class="py-3 px-5 text-right">
-                                    <div class="mb-2 text-center">Harga / 1 Hari</div>
+                                    <div class="mb-2 text-center">Harga / 24 Jam (1 Hari)</div>
                                     <div class="h2 font-weight-light">Rp. <?= $s['harga'] ?></div>
                                 </div>
                             </div>
