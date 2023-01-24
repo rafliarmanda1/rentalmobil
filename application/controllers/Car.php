@@ -1,8 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Car extends CI_Controller {
-    public function __construct() {
+class Car extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Car_model', 'car');
@@ -61,14 +63,14 @@ class Car extends CI_Controller {
     public function addCar()
     {
         $this->form_validation->set_rules('warna', "Warna", 'required|trim|max_length[50]', [
-            'required' => 'Warna harus di isi!',
-            'max_length' => 'Warna mobil terlalu panjang'
+            'required' => 'Merek Mobil harus di isi!',
+            'max_length' => 'Merek mobil terlalu panjang'
         ]);
 
         $this->form_validation->set_rules('plat_nomer', "Plat nomer", 'required|trim|min_length[4]|max_length[50]', [
-            'required' => 'Plat nomer harus di isi!',
-            'min_length' => 'Plat nomer terlalu pendek',
-            'max_length' => 'Plat nomer mobil terlalu panjang'
+            'required' => 'Nomer TNKB mobil harus di isi!',
+            'min_length' => 'Nomer TNKB mobil terlalu pendek',
+            'max_length' => 'Nomer TNKB mobil terlalu panjang'
         ]);
 
         $this->form_validation->set_rules('thn_mobil', "Tahun mobil", 'required|trim|min_length[4]|max_length[4]', [
@@ -82,7 +84,7 @@ class Car extends CI_Controller {
             'max_length' => 'Harga mobil melebihi'
         ]);
 
-        if ($this->form_validation->run() == false ) {
+        if ($this->form_validation->run() == false) {
             $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
             $data['merk'] = $this->car->getAllMerk();
             $data['transmisi'] = $this->car->getAllTransmisi();
@@ -101,7 +103,7 @@ class Car extends CI_Controller {
             $id_transmisi = $this->input->post('transmisi');
             $id_tnkb = $this->input->post('tnkb');
             $harga = $this->input->post('harga');
-            
+
             $this->car->tambahMobil($id_merk, $warna, $jml_kursi, $plat_nomer, $thn_mobil, $id_transmisi, $id_tnkb, $harga);
 
             $this->session->set_flashdata('message', '
@@ -112,7 +114,7 @@ class Car extends CI_Controller {
                 </button>
             </div>');
 
-            redirect('car');   
+            redirect('car');
         }
     }
 
@@ -140,14 +142,14 @@ class Car extends CI_Controller {
     public function ubahMobil($id)
     {
         $this->form_validation->set_rules('warna', "Warna", 'required|trim|max_length[50]', [
-            'required' => 'Warna harus di isi!',
-            'max_length' => 'Warna mobil terlalu panjang'
+            'required' => 'Merek mobil harus di isi!',
+            'max_length' => 'Merek mobil terlalu panjang'
         ]);
 
         $this->form_validation->set_rules('plat_nomer', "Plat nomer", 'required|trim|min_length[4]|max_length[50]', [
-            'required' => 'Plat nomer harus di isi!',
-            'min_length' => 'Plat nomer terlalu pendek',
-            'max_length' => 'Plat nomer mobil terlalu panjang'
+            'required' => 'Nomer TNKB mobil harus di isi!',
+            'min_length' => 'Nomer TNKB mobil terlalu pendek',
+            'max_length' => 'Nomer TNKB mobil terlalu panjang'
         ]);
 
         $this->form_validation->set_rules('thn_mobil', "Tahun mobil", 'required|trim|min_length[4]|max_length[4]', [
@@ -161,7 +163,7 @@ class Car extends CI_Controller {
             'max_length' => 'Harga mobil melebihi'
         ]);
 
-        if ($this->form_validation->run() == false ) {
+        if ($this->form_validation->run() == false) {
             $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
             $data['merk'] = $this->car->getAllMerk();
             $data['transmisi'] = $this->car->getAllTransmisi();
@@ -232,7 +234,7 @@ class Car extends CI_Controller {
     public function hapus($id)
     {
         $where = array('id' => $id);
-		$this->car->delete_data($where,'car');
+        $this->car->delete_data($where, 'car');
         $this->session->set_flashdata('message', '
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Berhasil</strong> menghapus data mobil
@@ -240,7 +242,7 @@ class Car extends CI_Controller {
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-		redirect('car');
+        redirect('car');
     }
 
     public function aktif($id)
@@ -254,7 +256,7 @@ class Car extends CI_Controller {
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-		redirect('car/active');
+        redirect('car/active');
     }
 
     public function nonaktif($id)
@@ -268,6 +270,6 @@ class Car extends CI_Controller {
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>');
-		redirect('car/active');
+        redirect('car/active');
     }
 }
