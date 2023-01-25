@@ -20,10 +20,10 @@
                                 <th scope="col">Nomor Telepon</th>
                                 <th scope="col">KTP</th>
                                 <th scope="col">Keterangan Mobil</th>
-                                <th scope="col">Tanggal</th>
-                                <th scope="col">Hari</th>
+                                <th scope="col">Tanggal Reservasi</th>
+                                <th scope="col">Sewa</th>
                                 <th scope="col">Harga Sewa</th>
-                                <th scope="col">action</th>
+                                <th scope="col">Keterangan</th>
                             </tr>
                         </thead>
                         <?php
@@ -79,14 +79,14 @@
                                                         <div class="row">
                                                             <div class="col-md-6">
                                                                 <ul>
-                                                                    <li>Warna : <?= $s['warna'] ?></li>
-                                                                    <li>Jumlah Kursi : <?= $s['jml_kursi'] ?></li>
-                                                                    <li>Tahun : <?= $s['thn_mobil'] ?></li>
+                                                                    <li>Merek Mobil : <?= $s['warna'] ?></li>
+                                                                    <li>Kapasitas Orang : <?= $s['jml_kursi'] ?></li>
+                                                                    <li>Tahun Mobil : <?= $s['thn_mobil'] ?></li>
                                                                 </ul>
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <ul>
-                                                                    <li>Nomor TNKB : <?= $s['tnkb'] ?></li>
+                                                                    <li>TNKB : <?= $s['tnkb'] ?></li>
                                                                     <li>Transmisi : <?= $s['transmisi'] ?></li>
                                                                 </ul>
                                                             </div>
@@ -100,7 +100,7 @@
                                                             <div class="col-md-6">
                                                                 <ul>
                                                                     <!-- masih manual -->
-                                                                    <li><strong>IDR</strong> <?= $s['harga'] ?> / 1 Hari</li>
+                                                                    <li><strong>Rp.</strong> <?= $s['harga'] ?> / 1 Hari</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -116,7 +116,7 @@
                                     </td>
                                     <td><?= date('d F Y', $user['updated_at']) ?></td>
                                     <td><?= $s['hari'] ?> Hari</td>
-                                    <td>IDR <?= $s['harga'] * $s['hari'] ?></td>
+                                    <td>Rp. <?= $s['harga'] * $s['hari'] ?></td>
                                     <td>
                                         <?php if (empty($s['accepted_at']) && empty($s['rejected_at'])) { ?>
                                             <button class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#terima<?= $s['id_sewa'] ?>">
@@ -137,7 +137,7 @@
                                         <?php } ?>
 
                                         <?php if (!empty($s['pay_at']) && empty($s['pay_confirm_at'])) { ?>
-                                            Konfirmasi anda
+                                            Menunggu Konfirmasi
                                         <?php } ?>
 
                                         <?php if (!empty($s['pay_confirm_at'])) { ?>
@@ -219,7 +219,7 @@
                                         <!-- End Modal -->
                                     </tr>
                                     <tr>
-                                        <td colspan="8" class="text-center">Mohon untuk cek mutasi dan <strong>konfirmasi</strong> bahwa pelanggan tersebut sudah membayar</td>
+                                        <td colspan="8" class="text-center">Mohon Untuk Cek Mutasi Rekening Bank BCA a.n DVM Group & <strong>Konfirmasi</strong> Jika Pelanggan Tersebut Sudah Melakukan Proses Pembayaran</td>
                                     </tr>
                                     <tr>
                                         <td colspan="8" class="text-center"><button class="btn btn-success" data-toggle="modal" data-target="#confirm<?= $s['id_sewa'] ?>">Konfirmasi</a></td>
@@ -235,7 +235,7 @@
                                                         </button>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <p>Mohon cek kembali mutasi rekening bank <strong><?= $bank['bank'] ?></strong> dengan nomor rekening <strong><?= $bank['norek'] ?></strong>. Jika merasa sudah benar konfirmasi pembayaran pelanggan</p>
+                                                        <p>Mohon Untuk Cek Mutasi Rekening Bank <strong><?= $bank['bank'] ?></strong> a.n DVM Group Dengan Nomer Rekening <strong><?= $bank['norek'] ?></strong>. Jika Merasa Sudah Berhasil Proses Pembayaran. Mohon Konfirmasi Pembayaran Pelanggan</p>
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

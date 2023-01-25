@@ -4,7 +4,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <!-- Favicons -->
-<title>invoice #<?= $s['id_sewa'] ?> - DVM Group - <?= $title ?></title>
+<title>DVM Rental Car - Bukti Kwitansi</title>
 <link href="<?= base_url('assets/') ?>bootslander2/assets/img/dvm.png" rel="icon">
 <link href="<?= base_url('assets/') ?>bootslander2/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -25,7 +25,7 @@ foreach ($sewa as $s) { ?>
                                 </div>
 
                                 <div class="col-md-6 text-right">
-                                    <p class="font-weight-bold mb-1">Invoice #<?= $s['id_sewa'] ?></p>
+                                    <p class="font-weight-bold mb-1">Kwitansi Invoice #<?= $s['id_sewa'] ?></p>
                                 </div>
                             </div>
 
@@ -45,7 +45,7 @@ foreach ($sewa as $s) { ?>
                                 <div class="col-md-6 text-right">
                                     <p class="font-weight-bold mb-2">Rincian Tanggal</p>
                                     <p class="mb-1"><span class="text-muted">Tanggal Sewa Mobil : <?= date('d F Y', $s['updated_at']) ?>
-                                            <p class="mb-1"><span class="text-muted">Lama Sewa Mobil - <?= $s['hari'] ?> hari
+                                            <p class="mb-1"><span class="text-muted">Sewa Mobil <?= $s['hari'] ?> Hari
                                                     <p class="mb-1"><span class="text-muted">Selesai Sewa Mobil : <?= date('d F Y', strtotime("+" . $s['hari'] . "days", $s['updated_at'])) ?>
                                 </div>
                             </div>

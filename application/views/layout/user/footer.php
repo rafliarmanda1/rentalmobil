@@ -1,4 +1,144 @@
     </div>
+    <!-- ======= Details Section ======= -->
+    <section id="details" class="details">
+      <div class="container">
+        <!-- ======= Details Section Rules ======= -->
+        <div class="row content">
+          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+            <img src="<?= base_url('assets/') ?>bootslander2/assets/img/details-2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>Hal-Hal Yang Harus Dipehatikan Saat Reservasi Rental Mobil DVM!</h3>
+            <p class="fst-italic">
+              Rules Yang Harus Dipatuhi Ketika Proses Reservasi Rental Mobil DVM!
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Tentukan detail lokasi pengambilan mobil dengan pihak penyedia
+                rental (Usahakan Diwilayah Lokasi Outlet DVM).</li>
+              <li><i class="bi bi-check"></i> Pada saat serah terima kendaraan, pihak penyedia rental akan melakukan
+                pengecekan keaslian data dan kondisi kendaraan.</li>
+              <li><i class="bi bi-check"></i> Lakukan pemesanan minimal 1x24 jam sebelum waktu penggunaan. Setelah
+                pesanan dikonfirmasi, penyewa wajib menyediakan foto dokumen.</li>
+              <li><i class="bi bi-check"></i> Kartu identitas (SIM A, KK, KTP, ID Kerja atau ID Pelajar).</li>
+              <li><i class="bi bi-check"></i> Wajib membawa dan menunjukkan dokumen asli yang telah disebutkan di atas
+                saat serah terima mobil di lokasi yang telah disepakati.</li>
+              <li><i class="bi bi-check"></i> Proses verifikasi dokumen wajib dilengkapi minimal 4 (empat) jam sebelum
+                penggunaan.</li>
+              <li><i class="bi bi-check"></i> Pihak penyedia rental berhak membatalkan apabila data tidak sesuai dan
+                syarat sewa tidak dapat dilengkapi.</li>
+              <li><i class="bi bi-check"></i> Akun sosial media yang aktif</li>
+            </ul>
+            <p>
+          </div>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="<?= base_url('assets/') ?>bootslander2/assets/img/details-3.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-md-8 pt-5" data-aos="fade-up">
+            <h3>Hal-Hal Yang Harus Dipehatikan Saat Rental Mobil DVM!</h3>
+            <p>Rules Yang Harus Dipatuhi Ketika Proses Rental Mobil DVM!.</p>
+            <ul>
+              <li><i class="bi bi-check"></i> Pemakaian kendaraan tidak lebih dari 250 km atau sesuai dengan kebijakan
+                penyedia rental.</li>
+              <li><i class="bi bi-check"></i> Kecelakaan dan sanksi yang diakibatkan oleh kelebihan penumpang dan
+                kelebihan muatan menjadi tanggung jawab penyewa sepenuhnya.</li>
+              <li><i class="bi bi-check"></i> Kehilangan dan kerusakan barang selama perjalanan di luar tanggung jawab
+                penyedia rental. </li>
+              <li><i class="bi bi-check"></i> Penyewa harus mengembalikan mobil dengan volume BBM sesuai dengan posisi
+                pada saat penjemputan atau mengikuti bar awal (bar to bar).</li>
+              <li><i class="bi bi-check"></i> Penyewa tidak diperkenankan membawa penumpang dan barang melebihi
+                kapasitas maksimal mobil yang disewa.</li>
+              <li><i class="bi bi-check"></i> Penyewa bertanggung jawab atas semua denda parkir, lalu lintas, dan
+                lainnya yang terjadi akibat pelanggaran hukum selama periode rental.</li>
+              <li><i class="bi bi-check"></i> Penyewa tidak diizinkan memindahtangankan kendaraan kepada pihak lain
+                tanpa seizin pihak penyedia rental.</li>
+              <li><i class="bi bi-check"></i> Penyewa bertanggung jawab untuk biaya penggantian atau perbaikan atas
+                kehilangan atau kerusakan seperti, namun tidak terbatas, pada STNK, kunci mobil, aksesoris, alat mobil,
+                head unit, tools set, kursi mobil, noda, goresan, dan biaya lain yang timbul akibat kelalaian penyewa.
+              </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="row content">
+          <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+            <img src="<?= base_url('assets/') ?>bootslander2/assets/img/details-2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+            <h3>Hal-Hal Yang Harus Dipehatikan Setelah Rental Mobil DVM!</h3>
+            <p class="fst-italic">
+              Rules Yang Harus Dipatuhi Ketika Setelah Rental Mobil DVM!
+            </p>
+            </p>
+            <ul>
+              <li><i class="bi bi-check"></i> Penyedia rental berhak untuk menahan Identitas jika mobil rusak atau jika
+                penyewa melanggar hukum selama periode rental.</li>
+              <li><i class="bi bi-check"></i> Penyedia rental tidak bertanggung jawab atas barang yang tertinggal di
+                mobil setelah penyewa melakukan serah terima kendaraan.</li>
+              <li><i class="bi bi-check"></i> Biaya asuransi dan biaya lainnya yang timbul atas kehilangan kendaraan
+                akan menjadi tanggung jawab pelanggan sesuai dengan ketentuan masing-masing penyedia rental.</li>
+
+              <div class="row content">
+                <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
+                  <img src="<?= base_url('assets/') ?>bootslander2/assets/img/details-4.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+                  <h3>Hal-Hal Yang Harus Diperhatikan Jika Overtime!</h3>
+                  <p style="text-align: justify;text-justify: inter-word;" class="fst-italic">
+                    Sebagai informasi untuk penyewaan mobil hanya dapat digunakan sesuai dengan waktu yang sudah
+                    ditentukan pada saat pemesanan. Jika melewati batas waktu yang telah ditentukan atau overtime, maka
+                    akan dikenakan biaya tambahan sesuai charge atau informasi dari vendor rental mobil terkait.
+                  </p>
+                  <h5>Biaya Charge Overtime!</h5>
+                  <h6>Overtime!</h6>
+                  <p>
+                    Dikenakan jika penggunaan melebihi 24 jam atau lewat dari pukul 23.59 waktu setempat per hari sewa,
+                    maka:
+                  <ul>
+                    <li><i class="bi bi-check"></i> Rp50.000/jam (dengan ketentuan mobil di bawah 2000 cc)</li>
+                    <li><i class="bi bi-check"></i> Rp75.000/jam (dengan ketentuan mobil di atas 2000 cc)</li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+    </section><!-- End Details Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Contact Us Dehavihan Motor Group</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location / Lokasi:</h4>
+                <p> Jl. Rh. Didi Sukardi, Citamiang, Kec. Citamiang, Kota Sukabumi, Jawa Barat 43143.</p>
+              </div>
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>dvmgroup@gmail.com</p>
+              </div>
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>WhatsApp:</h4>
+                <p>+62 85216641062</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Aug 07, 2022 at 11:29 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.4.28
+-- Host: 127.0.0.1
+-- Generation Time: Jan 24, 2023 at 04:43 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -48,10 +48,7 @@ CREATE TABLE `car` (
 --
 
 INSERT INTO `car` (`id`, `merk_id`, `warna`, `jml_kursi`, `plat_nomer`, `thn_mobil`, `image_mobil`, `nomor_tnkb_id`, `transmisi_id`, `harga`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 2, 'Merah', 6, 'AB 1341 XZ', '2005', 'default_mobil.jpg', 2, 2, 150000, 0, 1657260757, 1657954494),
-(3, 3, 'Suzuki', 4, 'D 1341 YZ', '2006', 'kari-shea-1SAnrIxw5OY-unsplash.jpg', 1, 1, 150000, 1, 1657348644, 1657953124),
-(7, 1, 'Hitam', 4, 'B 1945 CC', '2009', 'featured.png', 1, 1, 150000, 1, 1657455940, 1657951869),
-(8, 3, 'Biru', 6, 'AC 1234 DC', '2010', 'default_mobil.jpg', 2, 2, 200000, 1, 1657612522, 1657612522);
+(16, 19, 'brio', 4, 'f 1027 sa', '2013', 'BISMILLAH.jpg', 1, 2, 300000, 0, 1674571044, 1674572350);
 
 -- --------------------------------------------------------
 
@@ -71,9 +68,7 @@ CREATE TABLE `merk` (
 --
 
 INSERT INTO `merk` (`id_merk`, `merk`, `created_at`, `updated_at`) VALUES
-(1, 'Avanza', 1656571652, 1656571764),
-(2, 'Suzuki', 1656573354, 1656573354),
-(3, 'Honda', 1656854824, 1657261190);
+(19, 'lcgc', 1674571013, 1674571013);
 
 -- --------------------------------------------------------
 
@@ -113,6 +108,7 @@ CREATE TABLE `sewa` (
   `keterangan` varchar(150) NOT NULL,
   `pay_at` int(11) NOT NULL,
   `bukti` varchar(100) NOT NULL,
+  `pay_confirm_at` int(11) NOT NULL,
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -121,8 +117,8 @@ CREATE TABLE `sewa` (
 -- Dumping data for table `sewa`
 --
 
-INSERT INTO `sewa` (`id_sewa`, `admin_id`, `user_id`, `mobil_id`, `hari`, `accepted_at`, `rejected_at`, `keterangan`, `pay_at`, `bukti`, `created_at`, `updated_at`) VALUES
-(2, 1, 2, 1, 2, 1659862439, 0, '', 0, '', 1658474296, 1659862439);
+INSERT INTO `sewa` (`id_sewa`, `admin_id`, `user_id`, `mobil_id`, `hari`, `accepted_at`, `rejected_at`, `keterangan`, `pay_at`, `bukti`, `pay_confirm_at`, `created_at`, `updated_at`) VALUES
+(13, 1, 2, 16, 3, 1674572467, 0, '', 1674572493, 'hmif1.jpg', 1674572849, 1674572430, 1674572849);
 
 -- --------------------------------------------------------
 
@@ -207,11 +203,14 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `no_hp`, `password`, `role_id`, `alamat`, `ktp`, `is_activate`, `created_at`, `updated_at`) VALUES
-(1, 'dwifahriza', 'dwifahriza@gmail.com', '9a314ae3e3754a077749712a939832be.jpg', '089612313', '$2y$10$9lDKCahuwi2RwjRMih6zSu0IScaaPNwqjmY/eWNm6vMkJsHIyw2/e', 1, '', '', 1, 1655677533, 1658566021),
-(2, 'Rafli Armanda', 'rafli@gmail.com', 'ez.png', '08914442', '$2y$10$4ffZxrMsr8li0XKu5eJb/u5LUDlrdj5pguWApMLLIVRM1.4avFvum', 2, 'Jln cijangkar RT 02 RW 02', 'pngtree-yellow-crown-king-crown-png-image_5323922.png', 1, 1655677824, 1658157953),
-(6, 'syahrizal', 'syahrizal@gmail.com', 'default.jpg', '', '$2y$10$JpVWRi5wPff61e37btMSW.4kSq./zSv8JDGmWLG4k3/lSn8n3tl/y', 1, '', '', 1, 1656399541, 1656399541),
-(12, 'wildan', 'wildan@gmail.com', 'default.jpg', '', '$2y$10$QW2Xez3Am9KUJqOTmRLQ3u0mYSkR01zOda5Nf9oV.7LQkEQg8O9o2', 1, '', '', 1, 1656591775, 1656591775),
-(13, 'razif', 'razif@gmail.com', 'default.jpg', '', '$2y$10$gf0FKqSP5HSd61IU1vfC5ufHh9uTVgrspcpJD.Rme9yGK6l8fxrZm', 2, '', '', 1, 1658158111, 1658158111);
+(1, 'dwifahriza', 'dwifahriza@gmail.com', 'IMG_3991.jpg', '089612313', '$2y$10$9lDKCahuwi2RwjRMih6zSu0IScaaPNwqjmY/eWNm6vMkJsHIyw2/e', 1, '', '', 1, 1655677533, 1674570310),
+(2, 'Rafli Armanda', 'rafli@gmail.com', 'rafli.jpg', '08914442', '$2y$10$4ffZxrMsr8li0XKu5eJb/u5LUDlrdj5pguWApMLLIVRM1.4avFvum', 2, 'Jln cijangkar RT 02 RW 02', 'ktp.jpg', 1, 1655677824, 1674235852),
+(13, 'razif', 'razif@gmail.com', 'default.jpg', '08123456789', '$2y$10$gf0FKqSP5HSd61IU1vfC5ufHh9uTVgrspcpJD.Rme9yGK6l8fxrZm', 2, 'Jln Otista', 'pngtree-yellow-crown-king-crown-png-image_5323922.png', 1, 1658158111, 1662693313),
+(14, 'nazmi', 'nazmi@gmail.com', 'default.jpg', '089123455', '$2y$10$EN.IK05kOxtnrzoTJna2GeeqNL547gRukSyNmidbDtGT2M6plpneW', 2, 'asdasdsd', '3135715.png', 1, 1662683487, 1666336616),
+(15, 'ucup', 'ucup@gmail.com', 'default.jpg', '', '$2y$10$b9dLgVmgGXCDBWE228rFaOVsu61kQDpD93FiQbpuv0s4jprrq9dA.', 2, '', '', 1, 1666336476, 1666336476),
+(16, 'dawed', 'dawed@gmail.com', 'default.jpg', '', '$2y$10$O/wMyzyQFLI4wxwya43jM.eMWu00XUqfU4EKJuuY7Xti9L6h7PMXW', 2, '', '', 1, 1674473660, 1674473660),
+(17, 'dawegan', 'dawegan@gmail.com', 'default.jpg', '', '$2y$10$4gmg.f.Zp3XOxATAWvek0O9RV70Qp7Qs4Kz.U63ZBx0lHHyt1fnK2', 2, '', '', 1, 1674473713, 1674473713),
+(18, 'ezafahriza', 'ezafahriza@gmail.com', 'default.jpg', '', '$2y$10$QcXjl6cOdpc0T2c1vNIaY.5pSBTCOQwp/qgMWcIwGSksQP2yV2yAi', 2, '', '', 1, 1674473802, 1674473802);
 
 -- --------------------------------------------------------
 
@@ -306,13 +305,13 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `car`
 --
 ALTER TABLE `car`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `merk`
 --
 ALTER TABLE `merk`
-  MODIFY `id_merk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_merk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `rekening`
@@ -324,7 +323,7 @@ ALTER TABLE `rekening`
 -- AUTO_INCREMENT for table `sewa`
 --
 ALTER TABLE `sewa`
-  MODIFY `id_sewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_sewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `status_mobil`
@@ -348,7 +347,7 @@ ALTER TABLE `transmisi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `user_role`

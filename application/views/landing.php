@@ -5,7 +5,7 @@
       <div class="row justify-content-between">
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1>Dehavihan Rental Car. <span>Like Earth Pride!</span></h1>
+            <h1>Dehavihan Motor Group. <span>DVM Showroom Rental Car!</span></h1>
             <h2>Provider Of Quality Transportation Services in Sukabumi</h2>
             <div class="text-center text-lg-start">
               <a href="<?= base_url('auth/login') ?>" class="btn-get-started scrollto">Reservasi Sekarang!</a>
@@ -75,47 +75,41 @@
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
       <div class="container">
-
         <div class="section-title" data-aos="fade-up">
           <h2>Type Car</h2>
           <p>Choice The Type Unit Mobil Rental Car DVM?!</p>
         </div>
-
         <div class="row" data-aos="fade-left">
-
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-              <h3><a href="">Mobil Keluarga / SUV (6 Seater Car)</a></h3>
+              <h3><a href="">Luxury Car / SUV Transmisi A.T / M.T (6 Seater Car)</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
               <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-              <h3><a href="">Mobil Keluarga / MPV (6 Seater Car)</a></h3>
+              <h3><a href="">Mobil Keluarga / MPV - Transmisi A.T (6 Seater Car)</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
               <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-              <h3><a href="">Mobil Keluarga / MPV (4 Seater Car)</a></h3>
+              <h3><a href="">Mobil Keluarga / MPV - Transmisi M.T (6 Seater Car)</a></h3>
             </div>
           </div>
           <div class="col-lg-3 col-md-4 mt-4">
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
               <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-              <h3><a href="">Mobil Kecil / City Car (4 Seater Car)</a></h3>
+              <h3><a href="">City Car / LCGC - Transmisi A.T / M.T (4 Seater Car)</a></h3>
             </div>
           </div>
         </div>
     </section><!-- End Features Section -->
 
-
-
     <!-- ======= Details Section ======= -->
     <section id="details" class="details">
       <div class="container">
-
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
             <img src="<?= base_url('assets/') ?>bootslander2/assets/img/details-1.png" class="img-fluid" alt="">
@@ -126,22 +120,20 @@
               Dehavihan Motor Group Saat ini Memiliki 2 Outlet Showroom dan 1 Outlet Showroom & Rental Car!
             </p>
             <ul>
+              <h3>Outlet Showroom & Rental Car DVM</h3>
               <li><i class="bi bi-check"></i> Jl. Rh. Didi Sukardi, Citamiang, Kec. Citamiang, Kota Sukabumi, Jawa Barat
                 43143.</li>
+              <h3>Outlet Showroom Dehavihan Motor Group (DVM)</h3>
               <li><i class="bi bi-check"></i> Jl. Sudajaya, Baros, Kec. Baros, Kota Sukabumi, Jawa Barat
                 43143.</li>
               <li><i class="bi bi-check"></i> Jl. Pelda Suryanta No.49, Nanggeleng, Kec. Citamiang, Kota Sukabumi, Jawa
                 Barat
-                43145</li>
-
+                43145.</li>
             </ul>
-            <p>
-              Showroom Utama & Rental Car - Jl. Rh. Didi Sukardi, Citamiang, Kec. Citamiang, Kota Sukabumi, Jawa Barat
-              43143.
-            </p>
           </div>
         </div>
-
+        <!-- End Details Section -->
+        <!-- ======= Details Section Rules ======= -->
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
             <img src="<?= base_url('assets/') ?>bootslander2/assets/img/details-2.png" class="img-fluid" alt="">
@@ -151,7 +143,6 @@
             <p class="fst-italic">
               Rules Yang Harus Dipatuhi Ketika Proses Reservasi Rental Mobil DVM!
             </p>
-
             <ul>
               <li><i class="bi bi-check"></i> Tentukan detail lokasi pengambilan mobil dengan pihak penyedia
                 rental (Usahakan Diwilayah Lokasi Outlet DVM).</li>
@@ -214,7 +205,6 @@
             </p>
             </p>
             <ul>
-
               <li><i class="bi bi-check"></i> Penyedia rental berhak untuk menahan Identitas jika mobil rusak atau jika
                 penyewa melanggar hukum selama periode rental.</li>
               <li><i class="bi bi-check"></i> Penyedia rental tidak bertanggung jawab atas barang yang tertinggal di
@@ -244,7 +234,6 @@
                   </ul>
                 </div>
               </div>
-
           </div>
     </section><!-- End Details Section -->
 
@@ -258,7 +247,6 @@
         </div>
 
         <div class="row g-0" data-aos="fade-left">
-
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
               <a href="<?= base_url('assets/') ?>bootslander2/assets/img/gallery/hondamobilio.jpg" class="gallery-lightbox">
@@ -324,7 +312,6 @@
           </div>
 
         </div>
-
       </div>
     </section><!-- End Gallery Section -->
 
@@ -440,16 +427,13 @@
             </div>
           </div>
 
-
         </div>
-
       </div>
     </section><!-- End Team Section -->
 
     <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container">
-
         <div class="section-title" data-aos="fade-up">
           <h2>Price List Unit DVM!</h2>
           <p>Price List Unit Rental Mobil DVM!</p>
@@ -458,8 +442,8 @@
         <div class="row" data-aos="fade-left">
 
           <div class="col-lg-3 col-md-6">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Mobil Keluarga / SUV - M.T/A.T (6 Seater Car)</h3>
+            <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Luxury Car / SUV -Transmisi A.T / M.T (6 Seater Car)</h3>
               <h4><sup>Rp.</sup>450.000<span> / 24Jam</span></h4>
               <ul>
                 <li>Toyota All New Rush</li>
@@ -476,7 +460,7 @@
 
           <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
             <div class="box featured" data-aos="zoom-in" data-aos-delay="200">
-              <h3>Mobil Keluarga / MPV A.T (6 Seater Car)</h3>
+              <h3>Mobil Keluarga / MPV - Transmisi A.T (6 Seater Car)</h3>
               <h4><sup>Rp.</sup>400.000<span> / 24Jam</span></h4>
               <ul>
                 <li>Honda B-RV</li>
@@ -492,8 +476,8 @@
           </div>
 
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <h3>Mobil Keluarga / MPV M.T (6 Seater Car)</h3>
+            <div class="box featured" data-aos="zoom-in" data-aos-delay="300">
+              <h3>Mobil Keluarga / MPV - Transmisi M.T (6 Seater Car)</h3>
               </h3>
               <h4><sup>Rp.</sup>350.000<span> / 24Jam</span></h4>
               <ul>
@@ -510,9 +494,8 @@
           </div>
 
           <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="400">
-              <span class="advanced">Sale!</span>
-              <h3>Mobil Kecil / City Car (4 Seater Car)</h3>
+            <div class="box featured" data-aos="zoom-in" data-aos-delay="400">
+              <h3>City Car / LCGC - Transmisi A.T / M.T (4 Seater Car)</h3>
               <h4><sup>Rp.</sup>300.000<span> / 24Jam</span></h4>
               <ul>
                 <li>Honda Brio</li>
@@ -530,18 +513,14 @@
       </div>
     </section><!-- End Pricing Section -->
 
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
-
         <div class="section-title" data-aos="fade-up">
           <h2>Contact</h2>
           <p>Contact Us Dehavihan Motor Group</p>
         </div>
-
         <div class="row">
-
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
             <div class="info">
               <div class="address">
@@ -549,31 +528,21 @@
                 <h4>Location / Lokasi:</h4>
                 <p> Jl. Rh. Didi Sukardi, Citamiang, Kec. Citamiang, Kota Sukabumi, Jawa Barat 43143.</p>
               </div>
-
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
                 <p>dvmgroup@gmail.com</p>
               </div>
-
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>WhatsApp:</h4>
                 <p>+62 85216641062</p>
               </div>
-
             </div>
-
           </div>
-
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
-
-
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
-
   </main><!-- End #main -->
