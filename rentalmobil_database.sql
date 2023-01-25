@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2023 at 04:43 PM
+-- Generation Time: Jan 25, 2023 at 11:15 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 7.4.16
 
@@ -48,7 +48,24 @@ CREATE TABLE `car` (
 --
 
 INSERT INTO `car` (`id`, `merk_id`, `warna`, `jml_kursi`, `plat_nomer`, `thn_mobil`, `image_mobil`, `nomor_tnkb_id`, `transmisi_id`, `harga`, `is_active`, `created_at`, `updated_at`) VALUES
-(16, 19, 'brio', 4, 'f 1027 sa', '2013', 'BISMILLAH.jpg', 1, 2, 300000, 0, 1674571044, 1674572350);
+(17, 52, 'Toyota All New Rush', 6, 'F 1586 OY', '2021', 'allnewrush.jpg', 1, 2, 450000, 1, 1674588618, 1674589127),
+(18, 52, 'Daihatsu All New Terios', 6, 'F 1598 OI', '2020', 'daihatsuteriosnew.jpg', 1, 2, 450000, 1, 1674588738, 1674589135),
+(19, 52, 'Mithsubitshi X-Pander', 6, 'F 2297 OK', '2022', 'xpander.jpg', 2, 1, 450000, 1, 1674588934, 1674589111),
+(20, 53, 'Honda B-RV', 6, 'F 1779 OI', '2020', 'BRV.jpg', 1, 2, 400000, 1, 1674589098, 1674589158),
+(21, 53, 'Honda Mobilio', 6, 'F 1897 OY', '2020', 'hondamobilio.jpg', 1, 2, 400000, 1, 1674589256, 1674589286),
+(22, 53, 'Toyota Raize', 6, 'F 1587 OP', '2020', 'raize.jpg', 1, 2, 400000, 1, 1674589393, 1674590132),
+(27, 53, 'Suzuki All New Ertiga', 6, 'F 2579 OI', '2018', 'Suzuki_All_New_Ertiga.png', 2, 2, 400000, 1, 1674589786, 1674589841),
+(28, 54, 'Toyota All New Avanza', 6, 'F 1587 TU', '2017', 'Toyota-Avanza-F1.jpg', 1, 1, 350000, 1, 1674590239, 1674590265),
+(29, 54, 'Daihatsu All New Xenia', 6, 'F 2579 SV', '2017', 'Toyota-Avanza-F2.jpg', 2, 1, 350000, 1, 1674590333, 1674590369),
+(30, 54, 'Toyota Calya', 6, 'F 1079 OI', '2019', 'Daihatsu_Sigra.jpg', 1, 1, 350000, 1, 1674590437, 1674590468),
+(31, 54, 'Daihatsu Sigra', 6, 'F 2688 PU', '2018', 'Daihatsu_Sigra1.jpg', 2, 1, 350000, 1, 1674590557, 1674590569),
+(32, 54, 'Suzuki Ertiga', 6, 'F 2579 XP', '2016', 'Suzuki_Ertiga.jpg', 2, 1, 350000, 1, 1674590649, 1674590660),
+(33, 55, 'Honda Brio', 4, 'F 1027 SA', '2020', 'Honda_Brio.png', 1, 2, 300000, 1, 1674590722, 1674590849),
+(34, 55, 'Toyota All New Agya', 4, 'F 1598 OY', '2019', 'Toyota_Agya.png', 1, 2, 300000, 1, 1674590838, 1674590892),
+(35, 55, 'Daihatsu All New Ayla', 4, 'F 2579 OJ', '2019', 'Toyota_Agya1.png', 2, 1, 300000, 1, 1674590960, 1674590971),
+(36, 56, 'BMW', 4, 'F 1027 SA', '2023', 'mercedes-benz.jpg', 1, 2, 500000, 0, 1674619789, 1674626806),
+(39, 56, 'Tesla', 4, 'F 1111 RFS', '2022', 'TESLA.jpg', 1, 2, 300000, 1, 1674624821, 1674626876),
+(40, 56, 'Mercedes-Benz C 200', 4, 'F 1010 RFP', '2020', 'mercedes-benz2.jpg', 1, 2, 200000, 0, 1674624961, 1674625032);
 
 -- --------------------------------------------------------
 
@@ -68,7 +85,11 @@ CREATE TABLE `merk` (
 --
 
 INSERT INTO `merk` (`id_merk`, `merk`, `created_at`, `updated_at`) VALUES
-(19, 'lcgc', 1674571013, 1674571013);
+(52, 'Luxury Car / SUV - Transmisi A.T / M.T', 1674588409, 1674588409),
+(53, 'Mobil Keluarga / MPV - Transmisi A.T', 1674588436, 1674588436),
+(54, 'Mobil Keluarga / MPV - Transmisi M.T', 1674588455, 1674588455),
+(55, 'City Car / LCGC - Transmisi A.T / M.T', 1674588469, 1674588469),
+(56, 'Super Luxury Car Transmisi A.T', 1674619755, 1674624590);
 
 -- --------------------------------------------------------
 
@@ -89,7 +110,7 @@ CREATE TABLE `rekening` (
 --
 
 INSERT INTO `rekening` (`id`, `bank`, `norek`, `created_at`, `updated_at`) VALUES
-(3, 'BCA', 123456789, 1659777225, 1659777225);
+(3, 'BCA', 381055409, 1659777225, 1659777225);
 
 -- --------------------------------------------------------
 
@@ -118,7 +139,9 @@ CREATE TABLE `sewa` (
 --
 
 INSERT INTO `sewa` (`id_sewa`, `admin_id`, `user_id`, `mobil_id`, `hari`, `accepted_at`, `rejected_at`, `keterangan`, `pay_at`, `bukti`, `pay_confirm_at`, `created_at`, `updated_at`) VALUES
-(13, 1, 2, 16, 3, 1674572467, 0, '', 1674572493, 'hmif1.jpg', 1674572849, 1674572430, 1674572849);
+(15, 29, 32, 39, 2, 1674625310, 0, '', 1674625456, '', 1674625806, 1674625233, 1674625806),
+(16, 29, 32, 39, 3, 0, 1674627363, 'sudah disewa oleh orang lain\r\n', 0, '', 0, 1674627284, 1674627363),
+(17, 29, 32, 40, 3, 1674627601, 0, '', 1674627782, 'tanda-tangan-rafli.png', 1674627831, 1674627467, 1674627831);
 
 -- --------------------------------------------------------
 
@@ -203,14 +226,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `no_hp`, `password`, `role_id`, `alamat`, `ktp`, `is_activate`, `created_at`, `updated_at`) VALUES
-(1, 'dwifahriza', 'dwifahriza@gmail.com', 'IMG_3991.jpg', '089612313', '$2y$10$9lDKCahuwi2RwjRMih6zSu0IScaaPNwqjmY/eWNm6vMkJsHIyw2/e', 1, '', '', 1, 1655677533, 1674570310),
-(2, 'Rafli Armanda', 'rafli@gmail.com', 'rafli.jpg', '08914442', '$2y$10$4ffZxrMsr8li0XKu5eJb/u5LUDlrdj5pguWApMLLIVRM1.4avFvum', 2, 'Jln cijangkar RT 02 RW 02', 'ktp.jpg', 1, 1655677824, 1674235852),
-(13, 'razif', 'razif@gmail.com', 'default.jpg', '08123456789', '$2y$10$gf0FKqSP5HSd61IU1vfC5ufHh9uTVgrspcpJD.Rme9yGK6l8fxrZm', 2, 'Jln Otista', 'pngtree-yellow-crown-king-crown-png-image_5323922.png', 1, 1658158111, 1662693313),
-(14, 'nazmi', 'nazmi@gmail.com', 'default.jpg', '089123455', '$2y$10$EN.IK05kOxtnrzoTJna2GeeqNL547gRukSyNmidbDtGT2M6plpneW', 2, 'asdasdsd', '3135715.png', 1, 1662683487, 1666336616),
-(15, 'ucup', 'ucup@gmail.com', 'default.jpg', '', '$2y$10$b9dLgVmgGXCDBWE228rFaOVsu61kQDpD93FiQbpuv0s4jprrq9dA.', 2, '', '', 1, 1666336476, 1666336476),
-(16, 'dawed', 'dawed@gmail.com', 'default.jpg', '', '$2y$10$O/wMyzyQFLI4wxwya43jM.eMWu00XUqfU4EKJuuY7Xti9L6h7PMXW', 2, '', '', 1, 1674473660, 1674473660),
-(17, 'dawegan', 'dawegan@gmail.com', 'default.jpg', '', '$2y$10$4gmg.f.Zp3XOxATAWvek0O9RV70Qp7Qs4Kz.U63ZBx0lHHyt1fnK2', 2, '', '', 1, 1674473713, 1674473713),
-(18, 'ezafahriza', 'ezafahriza@gmail.com', 'default.jpg', '', '$2y$10$QcXjl6cOdpc0T2c1vNIaY.5pSBTCOQwp/qgMWcIwGSksQP2yV2yAi', 2, '', '', 1, 1674473802, 1674473802);
+(29, 'admin', 'admindvm@gmail.com', 'fotoformal4.jpg', '085216641062', '$2y$10$wfSeOc7aiQh/GvdS6A3Sau4xasacr1LT6jcqcBlJy5SugwIs.Bvsu', 1, '', '', 1, 1674584069, 1674624234),
+(30, 'Deni Irawan. S.H,. M.H.', 'denimanagerdvm@gmail.com', 'fotoformal2.jpg', '085216641062', '$2y$10$qTmNSa/QScE0FvdKvdeVsO1x.3hJ0OrXabiGEF8aRhTZpmVGtqYte', 1, '', '', 1, 1674584197, 1674624398),
+(31, 'Rizki Kurnia Apriansyah. S.Kom.', 'rizkiadmindvm@gmail.com', 'default.jpg', '', '$2y$10$hZS8cCcQLUu0FOqkHhoNxeeApW0Iu2xXNUF0dx.fVpiZYjxuIhthC', 1, '', '', 1, 1674584220, 1674584220),
+(32, 'userdvm', 'userdvm@gmail.com', 'fotoformal41.jpg', '085216641062', '$2y$10$VmC7KlTezzzB6UUYT5nOOOMaBLQK/YxZRUBj8jhufYqPcj9rnl8rm', 2, 'Jl. Rh. Didi Sukardi, Citamiang, Kec. Citamiang, Kota Sukabumi, Jawa Barat 43143.', 'ktp.png', 1, 1674585312, 1674626597);
 
 -- --------------------------------------------------------
 
@@ -305,13 +324,13 @@ ALTER TABLE `user_role`
 -- AUTO_INCREMENT for table `car`
 --
 ALTER TABLE `car`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `merk`
 --
 ALTER TABLE `merk`
-  MODIFY `id_merk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_merk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `rekening`
@@ -323,7 +342,7 @@ ALTER TABLE `rekening`
 -- AUTO_INCREMENT for table `sewa`
 --
 ALTER TABLE `sewa`
-  MODIFY `id_sewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_sewa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `status_mobil`
@@ -347,7 +366,7 @@ ALTER TABLE `transmisi`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `user_role`
