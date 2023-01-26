@@ -102,25 +102,25 @@
                     <div class="col-lg-3 col-md-4 mt-4">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
                             <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-                            <h3><a href="">Luxury Car / SUV Transmisi A.T / M.T (6 Seater Car)</a></h3>
+                            <h3><a href="<?= base_url("cari/cariSuv")?>">Luxury Car / SUV Transmisi A.T / M.T (6 Seater Car)</a></h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 mt-4">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
                             <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-                            <h3><a href="">Mobil Keluarga / MPV - Transmisi A.T (6 Seater Car)</a></h3>
+                            <h3><a href="<?= base_url("cari/cariMpvAt")?>">Mobil Keluarga / MPV - Transmisi A.T (6 Seater Car)</a></h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 mt-4">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
                             <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-                            <h3><a href="">Mobil Keluarga / MPV - Transmisi M.T (6 Seater Car)</a></h3>
+                            <h3><a href="<?= base_url("cari/cariMpvMt")?>">Mobil Keluarga / MPV - Transmisi M.T (6 Seater Car)</a></h3>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 mt-4">
                         <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
                             <i class="ri-file-list-3-line" style="color: #5578ff;"></i>
-                            <h3><a href="">City Car / LCGC - Transmisi A.T / M.T (4 Seater Car)</a></h3>
+                            <h3><a href="<?= base_url("cari/cariCityCar")?>">City Car / LCGC - Transmisi A.T / M.T (4 Seater Car)</a></h3>
                         </div>
                     </div>
                 </div>

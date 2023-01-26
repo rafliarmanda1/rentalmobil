@@ -18,6 +18,9 @@ class Car extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['car'] = $this->car->getAllCar();
         $data['title'] = 'Data Mobil';
+        
+        // var_dump($data['total_sewa']);
+        // die;
 
         if ($this->session->userdata('role_id') == 1) {
             $this->load->view('layout/admin/header', $data);

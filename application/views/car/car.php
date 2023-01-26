@@ -76,12 +76,37 @@
                                         </a>
                                     </td>
                                     <td>
+                                        <?php if ( $c['id'] != 39 && $c['id'] != 40 && $c['id'] != 17) { ?>
                                         <button class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#hapus<?= $c['id'] ?>">
+                                        <?php } else { ?>
+                                        <button class="btn btn-danger btn-icon-split" data-toggle="modal" data-target="#hapus-gagal<?= $c['id'] ?>">
+                                        <?php } ?>
                                             <span class="icon text-white-50">
                                                 <i class="fas fa-edit"></i>
                                             </span>
                                             <span class="text">hapus</span>
                                         </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="hapus-gagal<?= $c['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Tidak dapat dihapus</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Type mobil <strong><?= $c['merk'] ?></strong> ini tidak dapat dihapus !!!</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Modal -->
 
                                         <!-- Modal -->
                                         <div class="modal fade" id="hapus<?= $c['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

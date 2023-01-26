@@ -202,21 +202,20 @@
                                     <tr>
                                         <td colspan="8" class="text-center">
                                             Lihat bukti pembayaran <?= $s['name'] ?>
-                                            <u><a href="" data-toggle="modal" data-target="#buktiBayar<?= $s['id_sewa'] ?>">Lihat</a></u>
-                                        </td>
-
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="buktiBayar<?= $s['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <button class="btn btn-danger mb-3" data-dismiss="modal">
-                                                    <span class="icon text-white-100">
-                                                        <i class="fas fa-times"></i>
-                                                    </span>
-                                                </button>
-                                                <img src="<?= base_url('assets/img/bukti/') . $s['bukti'] ?>" alt="<?= $s['bukti'] ?>" width='500'>
+                                            <u><a href="#" data-toggle="modal" data-target="#bukti<?= $s['id_sewa'] ?>">Lihat</a></u>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="bukti<?= $s['id_sewa'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <button class="btn btn-danger mb-3" data-dismiss="modal">
+                                                        <span class="icon text-white-100">
+                                                            <i class="fas fa-times"></i>
+                                                        </span>
+                                                    </button>
+                                                    <img src="<?= base_url('assets/img/bukti/') . $s['bukti'] ?>" alt="<?= $s['bukti'] ?>" width='500'>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <!-- End Modal -->
+                                            <!-- End Modal -->
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td colspan="8" class="text-center">Mohon Untuk Cek Mutasi Rekening Bank BCA a.n DVM Group & <strong>Konfirmasi</strong> Jika Pelanggan Tersebut Sudah Melakukan Proses Pembayaran</td>

@@ -44,9 +44,11 @@ foreach ($sewa as $s) { ?>
 
                                 <div class="col-md-6 text-right">
                                     <p class="font-weight-bold mb-2">Rincian Tanggal</p>
-                                    <p class="mb-1"><span class="text-muted">Tanggal Sewa Mobil : <?= date('d F Y', $s['updated_at']) ?>
-                                            <p class="mb-1"><span class="text-muted">Sewa Mobil <?= $s['hari'] ?> Hari
-                                                    <p class="mb-1"><span class="text-muted">Selesai Sewa Mobil : <?= date('d F Y', strtotime("+" . $s['hari'] . "days", $s['updated_at'])) ?>
+                                    <p class="mb-1"><span class="text-muted">Tanggal Sewa Mobil : <?= date('d F Y', strtotime("+" . 2 . "days", $s['updated_at'])) ?></span></p>
+                                    <p class="mb-1"><span class="text-muted">Sewa Mobil <?= $s['hari'] ?> Hari</span></p>
+                                    <p class="mb-1"><span class="text-muted">Selesai Sewa Mobil :
+                                        <?php $akhir = $s['hari'] + 2?>
+                                        <?= date('d F Y', strtotime("+" . $akhir . "days", $s['updated_at'])) ?></span></p>
                                 </div>
                             </div>
 
