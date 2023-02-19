@@ -62,18 +62,19 @@ class Sewa extends CI_Controller {
 
             redirect('notifikasi');
         } else {
-            $config['upload_path'] = './assets/img/bukti/';
-            $config['allowed_types'] = 'gif|jpg|JPG|png|ico';
-            $config['max_size']     = '2048';
+            // $config['upload_path'] = './assets/img/bukti/';
+            // $config['allowed_types'] = 'gif|jpg|JPG|png|ico';
+            // $config['max_size']     = '2048';
 
-            $this->load->library('upload', $config);
-            if ($this->upload->do_upload('bukti')) {
-                $new_ktp = $this->upload->data('file_name');
-                $this->db->set('bukti', $new_ktp);
-            } else {
-                echo $this->upload->display_errors();
-            }
+            // $this->load->library('upload', $config);
+            // if ($this->upload->do_upload('bukti')) {
+            //     $new_ktp = $this->upload->data('file_name');
+            //     $this->db->set('bukti', $new_ktp);
+            // } else {
+            //     echo $this->upload->display_errors();
+            // }
 
+            $this->db->set('bukti', 'bukti-transfer.jpeg');
             $this->db->set('pay_at', time());
             $this->db->set('updated_at', time());
             $this->db->where('id_sewa', $id);
