@@ -145,14 +145,11 @@ class Car_model extends CI_Model
         return $sewa;
     }
 
-    function total_harga()
+    function total_transaksi()
     {
-        // $this->db->select_sum('harga');
-        // $this->db->from('sewa');
-        // $this->db->where('pay_confirm_at <', 1);
-        // $this->db->join('car','car.id=sewa.mobil_id');
-        // $query = $this->db->get();
-        // return $query->result();
+        $query = $this->db->query('SELECT * FROM sewa WHERE pay_confirm_at != 0');
+        $sewa = $query->num_rows();
+        return $sewa;
     }
 
     // User

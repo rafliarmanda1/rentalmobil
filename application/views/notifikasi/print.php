@@ -11,7 +11,7 @@
 <?php
 $count = 1;
 foreach ($sewa as $s) { ?>
-    <?php if ($s['user_id'] == $user['id']) { ?>
+    <?php if ($s['user_id'] == $user['id'] && $s['rejected_at'] == 0) { ?>
         <div class="container">
             <div class="row">
                 <div class="col-12">

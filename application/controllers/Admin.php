@@ -22,9 +22,8 @@ class Admin extends CI_Controller {
         $data['total_car_nonactive'] =  $this->car->total_car_nonactive();
         $data['total_car_active'] =  $this->car->total_car_active();
         $data['total_pesanan'] =  $this->car->total_pesanan();
-        $data['total_harga'] =  $this->car->total_harga();
+        $data['total_transaksi'] =  $this->car->total_transaksi();
 
-        // var_dump($data['total_harga']); die;
         $data['title'] = 'Dashboard';
 
         if ($this->session->userdata('role_id') == 1) {

@@ -114,7 +114,7 @@
                                         </div>
                                         <!-- End Modal -->
                                     </td>
-                                    <td><?= date('d F Y', $user['updated_at']) ?></td>
+                                    <td><?= date('d F Y', strtotime("+" . 1 . "days", $s['updated_at'])) ?></td>
                                     <td><?= $s['hari'] ?> Hari</td>
                                     <td>Rp. <?= $s['harga'] * $s['hari'] ?></td>
                                     <td>
