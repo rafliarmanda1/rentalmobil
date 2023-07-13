@@ -222,29 +222,26 @@
     <script src="<?= base_url('assets/') ?>bootslander2/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="<?= base_url('assets/') ?>bootslander2/assets/vendor/php-email-form/validate.js"></script>
     <script>
-      // function hitungJumlahHari() {
-      //   var input = document.getElementById('hari');
-      //   var tanggalInput = document.getElementById('hari').value;
-      //   var tanggal = new Date(tanggalInput);
-      //   var hari = Math.floor(((tanggal - new Date()) / (1000 * 60 * 60 * 24)) + 1); // Menghitung selisih dalam hari
-      //   tanggalInput.value = hari;
-      // }
       function hitungJumlahHari() {
         var input = document.getElementById('hari').value;
 
         var inputDate = document.getElementById('hari').value;
+
         var today = new Date();
+        today.setHours(0,0,0,0);
+
         var selectedDate = new Date(inputDate);
         var timeDifference = Math.abs(selectedDate.getTime() - today.getTime());
-        var dayDifference = Math.ceil((timeDifference / (1000 * 3600 * 24) - 0));
-
+        var dayDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+        var count = dayDifference - 1;
         var countElement = document.getElementById('count');
         var sewaButton = document.getElementById('sewaButton');
-        if (dayDifference == 0 || isNaN(dayDifference)) {
-          countElement.innerText = 'Tidak bisa menyewa dihari yang sama';
+
+        if (dayDifference <= 1) {
+          countElement.innerText = 'Tidak bisa menyewa di hari yang sama atau keesokan harinya';
           sewaButton.disabled = true;
         } else {
-          countElement.innerText = dayDifference + ' Hari';
+          countElement.innerText = (dayDifference - 1) + ' Hari';
           sewaButton.disabled = false;
         }
       }
