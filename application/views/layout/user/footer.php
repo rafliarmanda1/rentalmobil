@@ -199,7 +199,7 @@
 
       <div class="container">
         <div class="copyright">
-          &copy; Copyright <strong><span>@KerjaPraktikInformatikaUMMI</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>@DehavihanMotorGroup</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
@@ -221,7 +221,42 @@
     <script src="<?= base_url('assets/') ?>bootslander2/assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="<?= base_url('assets/') ?>bootslander2/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="<?= base_url('assets/') ?>bootslander2/assets/vendor/php-email-form/validate.js"></script>
+    <script>
+      // function hitungJumlahHari() {
+      //   var input = document.getElementById('hari');
+      //   var tanggalInput = document.getElementById('hari').value;
+      //   var tanggal = new Date(tanggalInput);
+      //   var hari = Math.floor(((tanggal - new Date()) / (1000 * 60 * 60 * 24)) + 1); // Menghitung selisih dalam hari
+      //   tanggalInput.value = hari;
+      // }
+      function hitungJumlahHari() {
+        var input = document.getElementById('hari').value;
 
+        var inputDate = document.getElementById('hari').value;
+        var today = new Date();
+        var selectedDate = new Date(inputDate);
+        var timeDifference = Math.abs(selectedDate.getTime() - today.getTime());
+        var dayDifference = Math.ceil((timeDifference / (1000 * 3600 * 24) - 0));
+
+        var countElement = document.getElementById('count');
+        var sewaButton = document.getElementById('sewaButton');
+        if (dayDifference == 0 || isNaN(dayDifference)) {
+          countElement.innerText = 'Tidak bisa menyewa dihari yang sama';
+          sewaButton.disabled = true;
+        } else {
+          countElement.innerText = dayDifference + ' Hari';
+          sewaButton.disabled = false;
+        }
+      }
+
+      var a = document.getElementById('hari');
+
+      document.getElementById("count").style.display = "none";
+
+      a.addEventListener("change", function() {
+        document.getElementById("count").style.display = "";
+      })
+    </script>
     <!-- Template Main JS File -->
     <script src="<?= base_url('assets/') ?>bootslander2/assets/js/main.js"></script>
 

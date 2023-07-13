@@ -94,9 +94,10 @@
                                         <input type="number" class="form-control" id="harga" value="<?= $c['harga'] ?>" disabled>
                                     </div>
                                     <div class="form-group">
-                                        <input type="number" class="form-control" id="hari" name="hari" placeholder="Masukkan jumlah hari">
+                                        <input type="date" min="<?php echo date('Y-m-d'); ?>" class="form-control" id="hari" name="hari" onchange="hitungJumlahHari()" placeholder="Masukkan jumlah hari">
+                                        <p id="count" class="form-text text-muted"></p>
                                     </div>
-                                    <button type="submit" class="btn btn-dark btn-block">Sewa</button>
+                                    <button id="sewaButton" type="submit" class="btn btn-dark btn-block">Sewa</button>
                                 </form>
                             </div>
                         </div>

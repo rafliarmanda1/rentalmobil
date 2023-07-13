@@ -1,9 +1,11 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Sewa extends CI_Controller {
+class Sewa extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Sewa_model', 'sewa');
@@ -14,11 +16,11 @@ class Sewa extends CI_Controller {
 
     public function createSewa($id)
     {
-        $this->form_validation->set_rules('hari', "Harga", 'required|trim|max_length[6]', [
+        $this->form_validation->set_rules('hari', "Harga", 'required', [
             'required' => 'Hari harus di isi!',
         ]);
 
-        if ($this->form_validation->run() == false ) {
+        if ($this->form_validation->run() == false) {
             $this->session->set_flashdata('message', '
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <strong>Hari</strong> harus di isi!
@@ -31,9 +33,13 @@ class Sewa extends CI_Controller {
         } else {
             $user_id = $this->input->post('user');
             $mobil_id = $this->input->post('mobil');
-            $hari = $this->input->post('hari');
+            $tanggalInput = $this->input->post('hari');
 
-            $this->sewa->tambahSewa($user_id, $mobil_id, $hari);
+            $tanggal = new DateTime($tanggalInput);
+            $hari = floor(($tanggal->diff(new DateTime())->days) + 1);
+            $hariInt = intval($hari);
+
+            $this->sewa->tambahSewa($user_id, $mobil_id, $hariInt);
 
             $this->session->set_flashdata('message', '
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -42,7 +48,7 @@ class Sewa extends CI_Controller {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>');
-            
+
             redirect('home/detail/' . $id);
         }
     }
@@ -78,7 +84,7 @@ class Sewa extends CI_Controller {
             $this->db->set('pay_at', time());
             $this->db->set('updated_at', time());
             $this->db->where('id_sewa', $id);
-			$this->db->update('sewa');
+            $this->db->update('sewa');
 
             $this->session->set_flashdata('message', '
             <div class="alert alert-success alert-dismissible fade show" role="alert">

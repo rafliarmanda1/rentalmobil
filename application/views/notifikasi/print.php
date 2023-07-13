@@ -25,7 +25,7 @@ foreach ($sewa as $s) { ?>
                                 </div>
 
                                 <div class="col-md-6 text-right">
-                                    <p class="font-weight-bold mb-1">Kwitansi Invoice #<?= $s['id_sewa'] ?></p>
+                                    <p class="font-weight-bold mb-1">Kuwitansi Invoice #<?= $s['id_sewa'] ?></p>
                                 </div>
                             </div>
 
@@ -44,11 +44,25 @@ foreach ($sewa as $s) { ?>
 
                                 <div class="col-md-6 text-right">
                                     <p class="font-weight-bold mb-2">Rincian Tanggal</p>
-                                    <p class="mb-1"><span class="text-muted">Tanggal Sewa Mobil : <?= date('d F Y', strtotime("+" . 2 . "days", $s['updated_at'])) ?></span></p>
+                                    <p class="mb-1"><span class="text-muted">Tanggal Sewa Mobil : <?php $date = new DateTime();
+                                                                                                    echo date('Y-m-d', strtotime("+" . 1 . "days", $s['sewa_created_at']))
+                                                                                                    // $dateTime = $s['sewa_created_at'];
+                                                                                                    // $date->setTimestamp($dateTime);
+                                                                                                    // $dateString = $date->format('Y-m-d');
+                                                                                                    // echo $dateString;
+                                                                                                    ?></span></p>
                                     <p class="mb-1"><span class="text-muted">Sewa Mobil <?= $s['hari'] ?> Hari</span></p>
                                     <p class="mb-1"><span class="text-muted">Selesai Sewa Mobil :
-                                        <?php $akhir = $s['hari'] + 2?>
-                                        <?= date('d F Y', strtotime("+" . $akhir . "days", $s['updated_at'])) ?></span></p>
+                                            <?php $akhir = $s['hari'] ?>
+                                            <?php $date = new DateTime();
+
+                                            echo date('Y-m-d', strtotime("+" . $akhir . "days", $s['sewa_created_at']));
+
+                                            // $dateTime = $s['sewa_created_at'] * $s['hari'];
+                                            // $date->setTimestamp($dateTime);
+                                            // $dateString = $date->format('Y-m-d H:i');
+                                            // echo $dateString; 
+                                            ?></span></p>
                                 </div>
                             </div>
 

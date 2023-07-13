@@ -114,7 +114,17 @@
                                         </div>
                                         <!-- End Modal -->
                                     </td>
-                                    <td><?= date('d F Y', strtotime("+" . 1 . "days", $s['updated_at'])) ?></td>
+                                    <td><?php
+                                        // $date = new DateTime();
+
+                                        // $dateTime = $s['sewa_created_at'];
+                                        // $date->setTimestamp($dateTime);
+                                        // $dateString = $date->format('Y-m-d');
+
+                                        // echo $dateString;
+                                        echo date('Y-m-d', strtotime("+" . 1 . "days", $s['sewa_created_at']))
+
+                                        ?></td>
                                     <td><?= $s['hari'] ?> Hari</td>
                                     <td>Rp. <?= $s['harga'] * $s['hari'] ?></td>
                                     <td>

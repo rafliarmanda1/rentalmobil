@@ -1,8 +1,10 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pesanan extends CI_Controller {
-    public function __construct() {
+class Pesanan extends CI_Controller
+{
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('Notifikasi_model', 'sewa');
         $this->load->model('Bank_model', 'bank');
@@ -17,6 +19,10 @@ class Pesanan extends CI_Controller {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['title'] = 'Data Sewa Mobil';
         $data['sewa'] = $this->sewa->getAllSewa();
+
+
+        // var_dump($data['sewa'][0]);
+        // die();
         $data['bank'] = $this->bank->getAllBankRow();
 
         if ($this->session->userdata('role_id') == 1) {
@@ -34,8 +40,8 @@ class Pesanan extends CI_Controller {
 
             $this->form_validation->set_rules('admin', "Harga", 'required');
             $this->form_validation->set_rules('mobil', "Harga", 'required');
-    
-            if ($this->form_validation->run() == false ) {
+
+            if ($this->form_validation->run() == false) {
                 $this->session->set_flashdata('message', '
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Gagal</strong> menerima penyewa
@@ -43,7 +49,7 @@ class Pesanan extends CI_Controller {
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>');
-    
+
                 redirect('pesanan');
             } else {
                 $admin_id = $this->input->post('admin');
@@ -58,7 +64,7 @@ class Pesanan extends CI_Controller {
                 $this->db->set('is_active', 0);
                 $this->db->where('id', $mobil_id);
                 $this->db->update('car');
-    
+
                 $this->session->set_flashdata('message', '
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Berhasil</strong> meneriwa penyewaan
@@ -77,8 +83,8 @@ class Pesanan extends CI_Controller {
 
             $this->form_validation->set_rules('admin', "admin", 'required');
             $this->form_validation->set_rules('keterangan', "Keterangan", 'required');
-    
-            if ($this->form_validation->run() == false ) {
+
+            if ($this->form_validation->run() == false) {
                 $this->session->set_flashdata('message', '
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     Mohon untuk mengisi <strong>keterangan penolakan</strong>
@@ -86,7 +92,7 @@ class Pesanan extends CI_Controller {
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>');
-    
+
                 redirect('pesanan');
             } else {
                 $admin_id = $this->input->post('admin');
@@ -98,7 +104,7 @@ class Pesanan extends CI_Controller {
                 $this->db->set('updated_at', time());
                 $this->db->where('id_sewa', $id);
                 $this->db->update('sewa');
-    
+
                 $this->session->set_flashdata('message', '
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <strong>Berhasil</strong> menolak penyewaan
